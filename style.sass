@@ -1,0 +1,143 @@
+body
+  height: 100%
+  background: #ddd9f899
+  font-family: Arial, Helvetica, sans-serif
+.card
+  width: 320px
+  height: 200px
+  position: relative
+  margin: 0 auto
+  padding: 0 5px
+  &__number
+    color: #fff
+    font-size: 20px
+    position: absolute
+    top: 55px
+    left: 90px
+    padding: 0 5px
+  &__content
+    margin-top: 5px
+  &__name
+    position: absolute
+    top: 173px
+    left: 10px
+    color: #fff
+    font-size: 16px
+    padding: 0 5px
+  &__date
+    display: flex
+    color: #fff
+    font-size: 16px
+    margin-top: 173px
+    margin-left: 204px
+    width: 60px
+    height: 20px
+  &__month
+    position: absolute
+    left: 207px
+  &__year
+    position: absolute
+    left: 242px
+  &__slash
+    position: absolute
+    left: 235px
+  &__cvv
+    position: absolute
+    color: #000
+    font-size: 16px
+    top: 78px
+    right: 75px
+  &__front, &__back 
+    position: absolute
+    width: 100%
+    height: 100%
+    transition: 1s
+    backface-visibility: hidden
+    border-radius: 10px
+  &__front 
+    background: url("img/card-front.png") no-repeat 0 0/contain
+  &__back 
+    background: url("img/card-back.png") no-repeat 0 0/contain
+    transform: rotateY(180deg)
+.trans-front 
+  transform: rotateY(180deg)
+.trans-back 
+  transform: rotateY(360deg)
+.margin
+  margin-left: 22px
+.container
+  max-width: 500px
+  margin: 0 auto
+.wrap
+  background: #fff
+  padding: 100px 30px 30px
+  box-shadow: -4px 3px 29px 6px rgba(33, 43, 51, 0.2)
+  border-radius: 10px
+  margin-top: -70px
+  min-width: 300px
+input
+  display: block
+  border: 1px solid #C7C9D1
+  width: 98%
+  height: 30px
+  border-radius: 5px
+  margin-bottom: 20px
+
+.border
+  border: 1px solid #fff
+  border-radius: 5px
+  text-align: center
+  animation: vis 0.2s ease-in
+  @keyframes vis
+    0% 
+      opacity: 0
+    100%
+      opacity: 1
+  &_big
+    width: 200px
+    height: 36px
+
+.visible
+  animation: visible 0.3s linear
+  transform: translateY(0%)
+  position: absolute
+  @keyframes visible
+    0% 
+      opacity: 0
+      transform: translateY(30%)
+    100% 
+      opacity: 1
+      transform: translateY(0%)
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  -moz-appearance: textfield
+
+.info
+  display: flex
+.form-button
+  background: #323bb2c9
+  color: #fff
+  position: relative
+  border-radius: 5px
+  border: none
+  padding: 10px 30px 
+  font-size: 18px
+  width: 100%
+  cursor: pointer
+.form-label
+  color: #4c4a4f
+  font-size: 14px
+.label-month
+  position: absolute
+  top: -16px
+.date-box
+  display: flex
+  position: relative
+  height: 34px
+  margin-top: 19px
+select
+  border: 1px solid #C7C9D1
+  border-radius: 5px
+  min-width: 120px
+  margin-right: 25px

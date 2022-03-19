@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <title>Credit card</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card" onclick="reverse();">
+            <div class="card__front">
+                <div class="card__number">
+                    <div class="card__content">#### #### #### ####</div>
+                </div>
+                <div class="card__name">
+                    <div class="card__content_name">Ad Soyad</div>
+                </div>
+                <div class="card__date">
+                    <div class="card__month"> MM</div>
+                    <span class="card__slash">/</span>
+                    <div class="card__year"> YY</div>
+                </div>
+            </div>
+            <div class="card__back">
+                <div class="card__cvv">
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <form action=""> 
+                <label class="form-label">Card Number</label>
+                <input type="number" maxlength="16" class="input-number" oninput="onInput();" onclick="addBorder();" pattern="[0-9]{16}" required />
+                
+                <label class="form-label">Card Name</label>
+                <input type="text" class="input-name" oninput="onInputName();" onclick="addBorderName();" required />
+                
+                <div class="info">
+                    <div class="date-box"> 
+                        <label for="month" class="label-month form-label">Month</label>
+                        <select class="month" onchange="onInputMonth();" onclick="addBorderDate();">
+                            <option value="">Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select class="year" onchange="onInputYear();" onclick="addBorderDate();">
+                            <option value="">Year</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                        </select>
+                    </div>
+                    <div class="cvv-box">
+                        <label class="form-label">CVV</label>
+                        <input class="input-cvv" type="text" maxlength="3" pattern="[0-9]{3}" oninput="onInputCvv();" onclick="turnOver();" required>   
+                    </div>
+                </div>
+                <button class="form-button"> Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
